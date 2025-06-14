@@ -25,3 +25,19 @@ with open ('lista2.pkl', 'rb') as fh:
     odczyt2 =pickle.load(fh)
     print(odczyt2)
     print(type(odczyt2))
+
+
+import ast
+
+
+with open ('lista3.txt', 'w') as file:
+    file.write(str(lista))
+
+with open ('lista3.txt', 'r') as file:
+    odczyt3 =file.read()
+    lista_odczytane=ast.literal_eval(odczyt3)
+    print(odczyt3)
+    print(type(odczyt3))
+
+    print(lista_odczytane)
+    print(type(lista_odczytane))
