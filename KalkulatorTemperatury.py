@@ -1,18 +1,17 @@
 class KalkulatorTemperatur:
     @staticmethod
-    def c_na_f(c):
+    def c_to_f(c):
         return (c * 9 / 5) + 32
 
     @staticmethod
-    def f_na_c(f):
+    def f_to_c(f):
         return (f - 32) * 5 / 9
 
 
+print(KalkulatorTemperatur.c_to_f(30.0))
+print(KalkulatorTemperatur.f_to_c(86.0))
 
-c = 100
-f = KalkulatorTemperatur.c_na_f(c)
-print(f"{c} C = {f:.2f} F")
+#dodane testy
+assert  86.0 == KalkulatorTemperatur.c_to_f(30.0)
+assert  100.0 == KalkulatorTemperatur.f_to_c(212.0)
 
-f = 212
-c = KalkulatorTemperatur.f_na_c(f)
-print(f"{f} F = {c:.2f} C")
